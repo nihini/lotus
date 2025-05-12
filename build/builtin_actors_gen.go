@@ -179,10 +179,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacebxppwtgpstn55klmiux64pwekibcapv6v26nbfrrateth5zzsdic"),
 	},
 }, {
-	Network:      "butterflynet",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzaceda5lc7qrwp2hdm6s6erppwuydsfqrhbgld7juixalk342inqimbo"),
+	Network:     "butterflynet",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzaceda5lc7qrwp2hdm6s6erppwuydsfqrhbgld7juixalk342inqimbo"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacea4fxakv3zww2jb7aaa4v6w7usbcxho7kpc6xpho66ltny72vnzki"),
 		"cron":             cid.MustParse("bafk2bzaceckhx3amza3xyxvw4x7xg7w7itsokvweiylys2mlcvvvi64uhyfhi"),
@@ -369,10 +368,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacedbvfxhxsdktslf2rto5kyiumvppoen2avbmpgh7ijsmkxjyua3s4"),
 	},
 }, {
-	Network:      "calibrationnet",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzacecqtwq6hjhj2zy5gwjp76a4tpcg2lt7dps5ycenvynk2ijqqyo65e"),
+	Network:     "calibrationnet",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzacecqtwq6hjhj2zy5gwjp76a4tpcg2lt7dps5ycenvynk2ijqqyo65e"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacecvd4xzbqbviaydq5r2h2jdgcn6bh5nklvohgvorznpstmir7l6dw"),
 		"cron":             cid.MustParse("bafk2bzaced6fxiw4g4faqhxxsetzcxlcyyjlwtzqiuwsx5zd2krtadxbiailg"),
@@ -568,10 +566,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacec4i7zpu6ca5zqcxsowiqqofqix7z5gh3k27mndpnm3wujbzuf2bk"),
 	},
 }, {
-	Network:      "caterpillarnet",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzacedrq643mgak6w3nbmz3wvcgjrirdoq7y6l3xgwijgirffgaxf6yqg"),
+	Network:     "caterpillarnet",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzacedrq643mgak6w3nbmz3wvcgjrirdoq7y6l3xgwijgirffgaxf6yqg"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacedza75txhwk3ztrl2m5uh7efogxbm7pj5rzqkxj2y2r3w5ixorz7i"),
 		"cron":             cid.MustParse("bafk2bzaceddiyznwu7kejp5l7yevyt76gptqquk6dmi7w3y7dd5zrdo2lzcci"),
@@ -591,10 +588,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzaceatvxu6ffkq3nvhffmw5avoeixt3yymzyotlz2qkyw4sh5ffw26gg"),
 	},
 }, {
-	Network:      "caterpillarnet",
-	Version:      17,
-	BundleGitTag: "v16.0.0",
-	ManifestCid:  cid.MustParse("bafy2bzacea6y67oqqokphvqdf4rruflrwzxyuquq2fgb34zjnh67nsk53is6k"),
+	Network:     "caterpillarnet",
+	Version:     17,
+	ManifestCid: cid.MustParse("bafy2bzacea6y67oqqokphvqdf4rruflrwzxyuquq2fgb34zjnh67nsk53is6k"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzaceb22mvrw4jzf2c4cypor3nbaap2lzkhpim6ny7rhd5pysazcpwet4"),
 		"cron":             cid.MustParse("bafk2bzacedvsp34iu4vwueh5jcmiwfhulnkudzrlprgcxj5tkp75bphfl7xus"),
@@ -781,10 +777,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacedd6hquizdv65nai6h5f2lfhkxgkrofn2zcrrwqi5cmbo2wotx6vm"),
 	},
 }, {
-	Network:      "devnet",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzaceclp3wfrwdjgh6c3gee5smwj3zmmrhb4fdbc4yfchfaia6rlljx5o"),
+	Network:     "devnet",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzaceclp3wfrwdjgh6c3gee5smwj3zmmrhb4fdbc4yfchfaia6rlljx5o"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacebl27l7f5dt35gfeukr7kzkenhwisdy53r3gmbagbzzfejfa3ci6a"),
 		"cron":             cid.MustParse("bafk2bzacedzo57rpw6debpc7aaenevimqdw44o47l5kjk27xd6qynjx7spyls"),
@@ -993,10 +988,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacecudaqwbz6dukmdbfok7xuxcpjqighnizhxun4spdqvnqgftkupp2"),
 	},
 }, {
-	Network:      "mainnet",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzacecnepvsh4lw6pwljobvwm6zwu6mbwveatp7llhpuguvjhjiqz7o46"),
+	Network:     "mainnet",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzacecnepvsh4lw6pwljobvwm6zwu6mbwveatp7llhpuguvjhjiqz7o46"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacedef4sqdsfebspu7dqnk7naj27ac4lyho4zmvjrei5qnf2wn6v64u"),
 		"cron":             cid.MustParse("bafk2bzacedjpipmkmlmgcsmvxijivmeo62t7zul7565wy7ubfmwdlwzbl2zsg"),
@@ -1016,10 +1010,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzacedxvui4lmogudblf7ir2rkglsfnjqlrzqv7hzcoa4t3dr2ni2vv26"),
 	},
 }, {
-	Network:      "mainnet",
-	Version:      17,
-	BundleGitTag: "v16.0.0",
-	ManifestCid:  cid.MustParse("bafy2bzaceaj3s3rrfbibikplap264uw74qor5yl35mqwokv4lwst4plpwry36"),
+	Network:     "mainnet",
+	Version:     17,
+	ManifestCid: cid.MustParse("bafy2bzaceaj3s3rrfbibikplap264uw74qor5yl35mqwokv4lwst4plpwry36"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzacec5ozi2c34ekahcae7ddflen4drqlbvumxdmos4oemwejnd6fng7i"),
 		"cron":             cid.MustParse("bafk2bzacec5zieykqe2qmrlwesc2f7deez2rsiil5acjbv3u2hurmcexvvig6"),
@@ -1206,10 +1199,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzaceafcnglgibjq5c26bzoyndzu77g6wdr7s3nnr3wjwhhtvfy7pb5dw"),
 	},
 }, {
-	Network:      "testing",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzaceazq2v3l6w2vhch76v5y5krsif5zf65ctega6bll6yrsxavwoyrf2"),
+	Network:     "testing",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzaceazq2v3l6w2vhch76v5y5krsif5zf65ctega6bll6yrsxavwoyrf2"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzaceaib7urgwq6pt2f77ursvsgjvad7yb6vlptf3wae5rrh5wovvmxn6"),
 		"cron":             cid.MustParse("bafk2bzacebr6zmuxuy3rxe7733oujafqigltqd5jsi2ze4axzwglkpqah3m4s"),
@@ -1396,10 +1388,9 @@ var EmbeddedBuiltinActorsMetadata = []*BuiltinActorsMetadata{{
 		"verifiedregistry": cid.MustParse("bafk2bzaceafcnglgibjq5c26bzoyndzu77g6wdr7s3nnr3wjwhhtvfy7pb5dw"),
 	},
 }, {
-	Network:      "testing-fake-proofs",
-	Version:      16,
-	BundleGitTag: "v16.0.1",
-	ManifestCid:  cid.MustParse("bafy2bzaceaauqnw45yfi6lh53gzxzx47tabzh7zart6eqr3eojp72vtzgs6tg"),
+	Network:     "testing-fake-proofs",
+	Version:     16,
+	ManifestCid: cid.MustParse("bafy2bzaceaauqnw45yfi6lh53gzxzx47tabzh7zart6eqr3eojp72vtzgs6tg"),
 	Actors: map[string]cid.Cid{
 		"account":          cid.MustParse("bafk2bzaceaib7urgwq6pt2f77ursvsgjvad7yb6vlptf3wae5rrh5wovvmxn6"),
 		"cron":             cid.MustParse("bafk2bzacebr6zmuxuy3rxe7733oujafqigltqd5jsi2ze4axzwglkpqah3m4s"),
