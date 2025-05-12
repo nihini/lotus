@@ -94,7 +94,7 @@ var UpgradeTeepInitialFilReserved = wholeFIL(1_400_000_000) // FIP-0100: 300M ->
 
 var UpgradeTockHeight = abi.ChainEpoch(-29)
 
-var UpgradeTockFixHeight = abi.ChainEpoch(-30)
+var UpgradeTockFixHeight = abi.ChainEpoch(-103)
 
 var UpgradeXxHeight = abi.ChainEpoch(200)
 
