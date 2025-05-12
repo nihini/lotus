@@ -74,12 +74,12 @@ const UpgradeTuktukHeight = -28
 // Tuktuk migration. along with a RampStartEpoch matching the upgrade height.
 var UpgradeTuktukPowerRampDurationEpochs = uint64(builtin.EpochsInYear)
 
-const UpgradeTeepHeight = 4320
+const UpgradeTeepHeight = -29
 
 var UpgradeTeepInitialFilReserved = wholeFIL(1_600_000_000) // FIP-0100: 300M -> 1.6B FIL
 
 const UpgradeTockHeight = UpgradeTeepHeight + builtin.EpochsInDay*2
-const UpgradeTockFixHeight = -29
+const UpgradeTockFixHeight = -30
 
 // ??????
 const UpgradeXxHeight = 999999999999999

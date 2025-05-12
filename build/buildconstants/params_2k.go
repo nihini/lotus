@@ -88,13 +88,13 @@ var UpgradeTuktukHeight = abi.ChainEpoch(-27)
 // Tuktuk migration. along with a RampStartEpoch matching the upgrade height.
 var UpgradeTuktukPowerRampDurationEpochs uint64 = 200
 
-var UpgradeTeepHeight = abi.ChainEpoch(200)
+var UpgradeTeepHeight = abi.ChainEpoch(-28)
 
 var UpgradeTeepInitialFilReserved = wholeFIL(1_400_000_000) // FIP-0100: 300M -> 1.4B FIL
 
-var UpgradeTockHeight = abi.ChainEpoch(300)
+var UpgradeTockHeight = abi.ChainEpoch(-29)
 
-var UpgradeTockFixHeight = abi.ChainEpoch(-28)
+var UpgradeTockFixHeight = abi.ChainEpoch(-30)
 
 var UpgradeXxHeight = abi.ChainEpoch(200)
 
