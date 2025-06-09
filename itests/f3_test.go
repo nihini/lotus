@@ -20,7 +20,6 @@ import (
 
 	"github.com/filecoin-project/lotus/api"
 	lotus_api "github.com/filecoin-project/lotus/api"
-	"github.com/filecoin-project/lotus/build/buildconstants"
 	"github.com/filecoin-project/lotus/chain/lf3"
 	"github.com/filecoin-project/lotus/itests/kit"
 	"github.com/filecoin-project/lotus/node"
@@ -62,9 +61,6 @@ func TestF3_Enabled(t *testing.T) {
 // 2. Not-yet-ready state (F3 enabled but not yet operational)
 func TestF3_InactiveModes(t *testing.T) {
 	kit.QuietMiningLogs()
-	oldMani := buildconstants.F3ManifestBytes
-	defer func() { buildconstants.F3ManifestBytes = oldMani }()
-	buildconstants.F3ManifestBytes = nil
 
 	testCases := []struct {
 		mode                 string
@@ -95,6 +91,32 @@ func TestF3_InactiveModes(t *testing.T) {
 				"F3IsRunning":                     false,
 			},
 		},
+		{
+			mode: "not running",
+			expectedErrors: map[string]any{
+				"F3GetOrRenewParticipationTicket": "ticket is not valid", //
+				"F3Participate":                   "ticket is not valid",
+				"F3GetCertificate":                f3.ErrF3NotRunning.Error(),
+				"F3GetLatestCertificate":          f3.ErrF3NotRunning.Error(),
+			},
+			expectedValues: map[string]any{
+				"F3GetOrRenewParticipationTicket": (api.F3ParticipationTicket)(nil),
+				"F3Participate":                   api.F3ParticipationLease{},
+				"F3GetCertificate":                (*certs.FinalityCertificate)(nil),
+				"F3GetLatestCertificate":          (*certs.FinalityCertificate)(nil),
+				"F3IsRunning":                     false,
+			},
+			customValidateReturn: map[string]func(t *testing.T, ret []reflect.Value){
+				"F3GetECPowerTable": func(t *testing.T, ret []reflect.Value) {
+					// special case because it simply returns power table from EC which is not F3 dependent
+					require.NotNil(t, ret[0].Interface(), "unexpected return value")
+				},
+				"F3GetF3PowerTable": func(t *testing.T, ret []reflect.Value) {
+					// special case because it simply returns power table from EC which is not F3 dependent
+					require.NotNil(t, ret[0].Interface(), "unexpected return value")
+				},
+			},
+		},
 	}
 
 	for _, tc := range testCases {
@@ -106,9 +128,18 @@ func TestF3_InactiveModes(t *testing.T) {
 			if tc.mode == "disabled" {
 				opts = append(opts, kit.F3Disabled())
 			}
+			blockTime := 100 * time.Millisecond
+			if tc.mode == "not running" {
+				m := newTestManifest(BaseNetworkName, 1<<32, blockTime)
+				cfg := &lf3.Config{
+					BaseNetworkName: BaseNetworkName,
+					StaticManifest:  m,
+				}
+				opts = append(opts, kit.F3Config(cfg))
+			}
 
 			client, miner, ens := kit.EnsembleMinimal(t, opts...)
-			ens.InterconnectAll().BeginMining(2 * time.Millisecond)
+			ens.InterconnectAll().BeginMining(blockTime)
 			ens.Start()
 
 			head := client.WaitTillChain(ctx, kit.HeightAtLeast(10))
@@ -139,6 +170,7 @@ func TestF3_InactiveModes(t *testing.T) {
 					}
 
 					if expectedError, hasExpectedError := tc.expectedErrors[fn]; hasExpectedError {
+						require.NotNil(t, ret[1].Interface(), "expected error got nil")
 						switch err := expectedError.(type) {
 						case error:
 							require.ErrorIs(t, ret[1].Interface().(error), err, "unexpected error")
