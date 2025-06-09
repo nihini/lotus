@@ -94,7 +94,7 @@ func TestF3_InactiveModes(t *testing.T) {
 		{
 			mode: "not running",
 			expectedErrors: map[string]any{
-				"F3GetOrRenewParticipationTicket": "ticket is not valid", //
+				"F3GetOrRenewParticipationTicket": "ticket is not valid", // not sure why "ticket is not valid" is returned
 				"F3Participate":                   "ticket is not valid",
 				"F3GetCertificate":                f3.ErrF3NotRunning.Error(),
 				"F3GetLatestCertificate":          f3.ErrF3NotRunning.Error(),
